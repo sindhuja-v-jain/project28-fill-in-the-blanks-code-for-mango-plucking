@@ -87,7 +87,10 @@ function draw() {
 
 function mouseDragged()
 {
-	Matter.Body.setPosition(stoneObj.body, {x:mouseX, y:mouseY}) 
+	
+	//4) write the code to set the position of the stone body , to //the same position where the mouse moves
+
+	
 }
 
 function mouseReleased()
@@ -99,11 +102,7 @@ function mouseReleased()
 function keyPressed() {
 	if (keyCode === 32) {
     Matter.Body.setPosition(stoneObj.body, {x:235, y:420}) 
-
-    
-  //4)write the code to attach the stone back to launcher object to get another chance to drop mangos
-  //hint:1 line code,you need to call the attach function defined in launcher class on the stoneOject body
-  
+  launcherObject.attach(stoneObj.body)
 
 
 	}
